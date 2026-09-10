@@ -1,5 +1,21 @@
 # Releases
 
+# OxCapsule v0.5.163 - release September 10 2026
+This release adds elevates the experience of the serve command and fixes some bugs with announcements.
+
+You may update your OxCapsule clients with the command `capsule update`.
+
+## 🐕‍🦺 Serve
+ - IMPORTANT: **capsule serve model key** provides a simple, convenient way to access your API Key and Endpoint for OxCapsule's self-hosted models.
+ - Gateway API keys are now reused per user and expire, rather than a new key being minted for each deployment.
+ - The new **capsule serve model key** shows your key and refreshes it if the gateway no longer accepts it.
+ - A model deployment's connection details logs no longer include the apiKey in the logs. They now carry only endpoint and model. apiKey visibility has been replaced with the new **capsule serve model key** command.
+## 🤖 Agent
+ - capsule agent oxsol --serve runs the HTTP/SSE channel for the OxSol dashboard, instead of chat or one-shot mode
+ - OxSol catalog spec names are now matched with exact case, so specs that previously failed to resolve now load
+## 🔔 Announcements
+- Fixed bug where capsule would make a network call to check for new announcements on every command.
+
 # OxCapsule v0.5.108 - release September 3 2026
 This release adds QOL changes to the serve and benchmark commands. The ability to connect to Windows machines through `capsule term` has also been provided. 
 
