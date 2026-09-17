@@ -1,4 +1,21 @@
 # Releases
+# OxCapsule v0.5.170 - release September 16 2026
+This release adds QOL updates to capsule streaming, agent and model serving.
+
+You may update your OxCapsule clients with the command `capsule update`.
+
+## 🐕‍🦺 Serve
+ - `capsule serve model remove` reports reason for failure
+ - Default model renamed from glm-5.2 to GLM-Large
+## 🤖 Agent
+ - Chat pane knows which spec you're editing and forks catalog specs into drafts
+ - modify_spec refuses catalog names, points to create_spec(template_from=...)
+ - New specs-listing route for the dashboard's saved-draft picker
+ - Nested spec edits no longer drop sibling keys
+## 📺  Streaming
+- Right and middle click buttons have proper functionality
+- Fixed issue where mouse cursor would teleport when showing or hiding
+- Reduced resolution shimmering
 
 # OxCapsule v0.5.163 - release September 10 2026
 This release adds elevates the experience of the serve command and fixes some bugs with announcements.
