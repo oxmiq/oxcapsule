@@ -1,4 +1,24 @@
 # Releases
+# OxCapsule v0.5.186 - release September 24 2026
+This release adds updates to user storage, capsule serve, and capsule completion.
+
+You may update your OxCapsule clients with the command `capsule update`.
+
+## 🐕‍🦺 Serve
+- Ray dashboard isn't published on every deployment
+- serve model rm tears down the way of the deployment
+- Bad deployment names are rejected on submit
+- kimi-k3 recipe deploys real model
+## 🗃️ User Storage
+- UserStorage now stays alive and supports longer session lengths.
+- UserStorage update time now instant instead of taking 10 minutes.
+- Cleaner flow for switching UserStorage's mount path.
+- Failing mounts are more quickly detected and cleaned up.
+- Fixed bug where storage mounts could be nested on top of each other.
+ ## 🔑 Authentication
+- Clearer warnings for storing auth tokens in Linux keyrings
+- SSH key store is closed on session teardown
+
 # OxCapsule v0.5.170 - release September 16 2026
 This release adds QOL updates to capsule streaming, agent and model serving.
 
