@@ -1,4 +1,20 @@
 # Releases
+# OxCapsule v0.5.225 - release October 1 2026
+This release fixes agent chat responsiveness, adds warm-cache modelling to OxSol, and repairs user whitelisting.
+
+You may update your OxCapsule clients with the command `capsule update`.
+
+## 🤖 Agent
+- Chat prompts no longer freeze messages in the chat. Fixed in OxTutor, OxSol and Capsule Helper.
+- The first Ctrl+C of a session cancels the running turn and keeps you in the chat rather than ending the entire session. A Ctrl+C without a running session will still exit the flow.
+- OxTutor's tool-approval prompt no longer blocks the loop. Ctrl+C now cancels the prompt but still remains in the session.
+- OxSol's run tools accept `prior_kv_context_length`, so an agentic workload can be modeled with a warm KV cache instead of by inflating context length.
+- OxSol result cards now show the prior KV context, and comparing two differing run flags for the same model no longer look identical.
+## 🗃️ User Storage
+- Improved consistency with UserStorage's mounting
+## 🔑 Authentication
+- Whitelisted users and auto-create domains now work for B2C sign-ins. The email address was read from a claim B2C does not send, so the whitelist was never consulted and user records were saved without an email address.
+
 # OxCapsule v0.5.186 - release September 24 2026
 This release adds updates to user storage, capsule serve, and capsule completion.
 
