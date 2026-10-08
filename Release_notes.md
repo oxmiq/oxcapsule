@@ -1,4 +1,19 @@
 # Releases
+# OxCapsule v0.5.236 - release October 8 2026
+Adds QOL updates to user storage and streaming.
+
+You may update your OxCapsule clients with the command `capsule update`.
+
+## 🗃️ UserStorage
+- Fixed issue where UserStorage mounts would be unable to add/remove their quota
+- Fixed UserStorage error that would cancel the machine launch flow. 
+## 🔌 Server Backend
+- All OxCapsule servers come supplied with OxCapsule CLI
+- Fixed issue where a docker's custom daemon.json entries were not getting preserved on certain machines
+## 📺  Streaming
+- Fixed syncing between the modifier keys (Ctrl, Shift, etc.)  between your local machine and the streaming machine.
+- Linux: Mouse cursor no longer disappears intermittently when typing
+
 # OxCapsule v0.5.225 - release October 1 2026
 This release fixes agent chat responsiveness, adds warm-cache modelling to OxSol, and repairs user whitelisting.
 
