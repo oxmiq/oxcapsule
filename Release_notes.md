@@ -1,4 +1,17 @@
 # Releases
+# OxCapsule v0.5.240 - release October 15 2026
+This release adds a new capsule command - ``capsule docaudit`` - as well as tweaks to user storage and scheduler.
+
+### 🗓️ Scheduler
+- Scheduled jobs can declare output directories to be archived and uploaded when the job ends, and choose whether the working directory is deleted afterwards
+- `capsule schedule start` doesn't print the values of environment variables that would contain tokens, secrets, etc.
+- `--repo` on `capsule code` or `capsule term` accepts GitHub SSH URLs
+### 🗃️ UserStorage
+- Improved clarity and brevity to UserStorage logging
+- The mounting process exits quickly on failed mounts.
+### Misc
+- `sshrtc_server` writes a crash log (sshrtc_client_crash.log) when it crashes
+
 # OxCapsule v0.5.236 - release October 8 2026
 Adds QOL updates to user storage and streaming.
 
