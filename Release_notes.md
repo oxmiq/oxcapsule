@@ -1,4 +1,22 @@
 # Releases
+# OxCapsule v0.5.252 - release October 21 2026
+This release adds fixes to schedule and docaudit, as well as improvements to authentication and UserStorage.
+
+## 🔑 Authentication
+- On Linux, all login methods, with tokens, keyrings, and token caches are compatible with each other. Only one method of logging in needs to work for you to stay logged in.
+- `capsule auth login` is now saved even when CAPSULE_AUTH_TOKEN env var is set
+## 🗓️ Scheduler
+- `capsule schedule start --script` with a file path that doesn't exist now fails with `Script file not found` instead of uploading the path as the script
+## 🔎 Docaudit
+- Cancelling an audit stops its container on the machine
+- `capsule docaudit run` without `--machine-name` or `--config-tag` shows a usage error instead of a stack trace
+## 🗃️ UserStorage
+- Reconnecting to a machine keeps a working UserStorage mount instead of remounting it, so jobs using it keep running
+- Fixed bug where UserStorage fails when CAPSULE_AUTH_TOKEN is set and there's a saved login through `capsule auth login`
+### Misc
+- `capsule update` works for other customers set in config
+- Commands no longer print a raw network stack trace when your machine is offline
+
 # OxCapsule v0.5.240 - release October 15 2026
 This release adds a new capsule command - ``capsule docaudit`` - as well as tweaks to user storage and scheduler.
 
