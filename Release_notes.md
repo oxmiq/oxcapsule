@@ -1,4 +1,18 @@
 # Releases
+# OxCapsule v0.5.267 - release October 29 2026
+This release adds updates to docaudit, schedule and serve, as well as QOL to authentication.
+
+You may update your OxCapsule clients with the command `capsule update`.
+
+## 🐕‍🦺 Serve
+- New `capsule serve model` flags `--gateway-timeout`, `--gateway-stream-timeout` and `--gateway-max-parallel-requests` set the gateway entry's limits when it is created
+- `capsule serve model rm -m <machine>` now exits with an error when there is no teardown to run for that deployment type
+## 🔑 Authentication
+- Fixed bug where an HTTP error is shown if a valid token for a different Capsule environment is provided.
+## 🗓️ Scheduler
+- `--env KEY=VALUE` values now reach the job on every machine, not only on machines using the job runner
+- Keys that aren't valid variable names are dropped with a warning
+
 # OxCapsule v0.5.252 - release October 21 2026
 This release adds fixes to schedule and docaudit, as well as improvements to authentication and UserStorage.
 
