@@ -1,4 +1,34 @@
 # Releases
+# OxCapsule v0.5.279 - release November 18 2026
+This release adds QOL updates to Linux streaming and sshrtc connection.
+
+You may update your OxCapsule clients with the command `capsule update`.
+
+## 🔌 Connectivity
+- Connection no longer displays as reachable in `capsule session list` after a connection drop
+## 🖥️ Linux Streaming
+- Video no longer drifts out of time when frames arrive late
+- Fewer packet-loss notifications
+## 🗃️ UserStorage
+- UserStorage mounts correctly on machines whose home folder is a symlink
+
+# OxCapsule v0.5.275 - release November 12 2026
+This release patches several bugs and adds whitelisting support.
+
+You may update your OxCapsule clients with the command `capsule update`.
+
+## 📰 Whitelists
+- Enabled whitelisting for private environments
+- Customer groups can now be locked to specific users
+## 📈 `capsule benchmark`
+- Fixed bug where benchmarking results do not send to the dashboard
+- Improved scoring metrics on the quality of the model's answers
+- Better parsing of `capsule benchmark` arguments
+- Fixed issue where double quotes in scripts were swallowed on Linux and Mac machines
+- Improved handling on longer sessions and slower connections
+## 🐛 Bug Fixes
+- Various security patches
+
 # OxCapsule v0.5.267 - release October 29 2026
 This release adds updates to docaudit, schedule and serve, as well as QOL to authentication.
 
